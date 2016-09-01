@@ -1,0 +1,27 @@
+Title,LinkLocator,Parent,Roles,Header
+Delivery Support,PartialLinkText,Top,Admin DelSup,
+Current Statuses,LinkText,Delivery Support,Admin DelSup,Statuses that are Current
+Not Green Statuses,LinkText,Delivery Support,Admin DelSup,Statuses that are Not Green
+Red Statuses,LinkText,Delivery Support,Admin DelSup,Statuses that are Red
+Yellow Statuses,LinkText,Delivery Support,Admin DelSup,Statuses that are Yellow
+Green Statuses,LinkText,Delivery Support,Admin DelSup,Statuses that are Green
+Overdue Statuses,LinkText,Delivery Support,Admin DelSup,Statuses that are Overdue
+All Issues,LinkText,Delivery Support,Admin DelSup,All Issues
+All Open Issues,LinkText,Delivery Support,Admin DelSup,All Issues
+All Open Unassigned Issues,LinkText,Delivery Support,Admin DelSup,All Issues
+All In Progress Issues,LinkText,Delivery Support,Admin DelSup,All Issues
+Account Manager,PartialLinkText,Top,AccMgr,
+Current Statuses,LinkText,Account Manager,AccMgr,Statuses that are Current
+Not Green Statuses,LinkText,Account Manager,AccMgr,Statuses that are Not Green
+Red Statuses,LinkText,Account Manager,AccMgr,Statuses that are Red
+Yellow Statuses,LinkText,Account Manager,AccMgr,Statuses that are Yellow
+Green Statuses,LinkText,Account Manager,AccMgr,Statuses that are Green
+Overdue Statuses,LinkText,Account Manager,AccMgr,Statuses that are Overdue
+All Issues,LinkText,Account Manager,AccMgr,All Issues
+All Open Issues,LinkText,Account Manager,AccMgr,All Issues
+All Open Unassigned Issues,LinkText,Account Manager,AccMgr,All Issues
+All In Progress Issues,LinkText,Account Manager,AccMgr,All Issues
+Admin,PartialLinkText,Top,Admin,
+Account & Project Management,LinkText,Admin,Admin,Accounts
+User Management,LinkText,Admin,Admin,User Management
+Engagement Type Management,LinkText,Admin,Admin,Engagement Types

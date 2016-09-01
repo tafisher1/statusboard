@@ -1,0 +1,13 @@
+Delivery Support,Current Statuses,TRUE
+Delivery Support,Not Green Statuses,TRUE
+Delivery Support,Red Statuses,TRUE
+Delivery Support,Yellow Statuses,TRUE
+Delivery Support,Green Statuses,TRUE
+Delivery Support,Overdue Statuses,TRUE
+Delivery Support,All Issues,TRUE
+Delivery Support,All Open Issues,TRUE
+Delivery Support,All Open Unassigned Issues,TRUE
+Delivery Support,All In Progress Issues,TRUE
+Admin,Account & Project Management,FALSE
+Admin,User Management,FALSE
+Admin,Engagement Type Management,FALSE

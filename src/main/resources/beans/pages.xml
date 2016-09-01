@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+    http://www.springframework.org/schema/util 
+    http://www.springframework.org/schema/util/spring-util-4.1.xsd">
+    
+	<bean id="pageTitle" class="java.lang.String">
+		<constructor-arg value="Statusboard" />
+	</bean>
+	<bean id="headerClassName" class="java.lang.String">
+		<constructor-arg value="page-header" />
+	</bean>
+
+	<bean id="currentStatuses_page" class="com.xpanxion.statusboard.page.PageObject">
+		<constructor-arg ref="pageTitle" />
+		<constructor-arg value="${statusReport.current.heading}" />
+		<constructor-arg ref="headerClassName" />
+		<constructor-arg ref="className" />
+	</bean>
+
+	<bean id="notGreenStatuses_page" class="com.xpanxion.statusboard.page.PageObject">
+		<constructor-arg ref="pageTitle" />
+		<constructor-arg value="Statuses that are Not Green" />
+		<constructor-arg ref="headerClassName" />
+		<constructor-arg ref="className" />
+	</bean>
+
+	<bean id="redStatuses_page" class="com.xpanxion.statusboard.page.PageObject">
+		<constructor-arg ref="pageTitle" />
+		<constructor-arg value="Statuses that are Red" />
+		<constructor-arg ref="headerClassName" />
+		<constructor-arg ref="className" />
+	</bean>
+
+	<bean id="yellowStatuses_page" class="com.xpanxion.statusboard.page.PageObject">
+		<constructor-arg ref="pageTitle" />
+		<constructor-arg value="Statuses that are Yellow" />
+		<constructor-arg ref="headerClassName" />
+		<constructor-arg ref="className" />
+	</bean>
+
+	<bean id="greenStatuses_page" class="com.xpanxion.statusboard.page.PageObject">
+		<constructor-arg ref="pageTitle" />
+		<constructor-arg value="Statuses that are Green" />
+		<constructor-arg ref="headerClassName" />
+		<constructor-arg ref="className" />
+	</bean>
+
+	<bean id="overdueStatuses_page" class="com.xpanxion.statusboard.page.PageObject">
+		<constructor-arg ref="pageTitle" />
+		<constructor-arg value="Statuses that are Overdue" />
+		<constructor-arg ref="headerClassName" />
+		<constructor-arg value="CLASS_NAME" />
+	</bean>
+
+	<bean id="allIssues_page" class="com.xpanxion.statusboard.page.PageObject">
+		<constructor-arg ref="pageTitle" />
+		<constructor-arg value="All Issues" />
+		<constructor-arg ref="headerClassName" />
+		<constructor-arg value="CLASS_NAME" />
+	</bean>
+
+	<bean id="allOpenIssues_page" class="com.xpanxion.statusboard.page.PageObject">
+		<constructor-arg ref="pageTitle" />
+		<constructor-arg value="All Issues" />
+		<constructor-arg ref="headerClassName" />
+		<constructor-arg value="CLASS_NAME" />
+	</bean>
+
+	<bean id="allOpenUnassignedIssues_page" class="com.xpanxion.statusboard.page.PageObject">
+		<constructor-arg ref="pageTitle" />
+		<constructor-arg value="All Issues" />
+		<constructor-arg ref="headerClassName" />
+		<constructor-arg value="CLASS_NAME" />
+	</bean>
+	
+	<bean id="allInProgressIssues_page" class="com.xpanxion.statusboard.page.PageObject">
+		<constructor-arg ref="pageTitle" />
+		<constructor-arg value="All Issues" />
+		<constructor-arg ref="headerClassName" />
+		<constructor-arg value="CLASS_NAME" />
+	</bean>
+</beans>

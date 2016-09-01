@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+    http://www.springframework.org/schema/util 
+    http://www.springframework.org/schema/util/spring-util-4.1.xsd">
+
+	<bean id="currentStatuses_link" class="com.xpanxion.statusboard.navigation.Link">
+		<!-- Link(String locator, LocatorType byType, IPageObject page) -->
+		<constructor-arg value="Current Statuses" />
+		<constructor-arg value="LINK_TEXT" />
+		<constructor-arg ref="currentStatuses_page" />
+	</bean>
+
+	<bean id="notGreenStatuses_link" class="com.xpanxion.statusboard.navigation.Link">
+		<!--Link(String locator, LocatorType byType, IPageObject page) -->
+		<constructor-arg value="Not Green Statuses" />
+		<constructor-arg value="LINK_TEXT" />
+		<constructor-arg ref="notGreenStatuses_page" />
+	</bean>
+
+	<bean id="redStatuses_link" class="com.xpanxion.statusboard.navigation.Link">
+		<!--Link(String locator, LocatorType byType, IPageObject page) -->
+		<constructor-arg value="Red Statuses" />
+		<constructor-arg value="LINK_TEXT" />
+		<constructor-arg ref="redStatuses_page" />
+	</bean>
+
+	<bean id="yellowStatuses_link" class="com.xpanxion.statusboard.navigation.Link">
+		<!--Link(String locator, LocatorType byType, IPageObject page) -->
+		<constructor-arg value="Yellow Statuses" />
+		<constructor-arg value="LINK_TEXT" />
+		<constructor-arg ref="yellowStatuses_page" />
+	</bean>
+
+	<bean id="greenStatuses_link" class="com.xpanxion.statusboard.navigation.Link">
+		<!--Link(String locator, LocatorType byType, IPageObject page) -->
+		<constructor-arg value="Green Statuses" />
+		<constructor-arg value="LINK_TEXT" />
+		<constructor-arg ref="greenStatuses_page" />
+	</bean>
+
+	<bean id="overdueStatuses_link" class="com.xpanxion.statusboard.navigation.Link">
+		<!--Link(title, LocatorType.getLocatorType(locator), page) -->
+		<constructor-arg value="Overdue Statuses" />
+		<constructor-arg value="LINK_TEXT" />
+		<constructor-arg ref="overdueStatuses_page" />
+	</bean>
+
+	<bean id="allIssues_link" class="com.xpanxion.statusboard.navigation.Link">
+		<!-- Link(String locator, LocatorType byType, IPageObject page) ) -->
+		<constructor-arg value="All Issues" />
+		<constructor-arg value="LINK_TEXT" />
+		<constructor-arg ref="allIssues_page" />
+	</bean>
+
+	<bean id="allOpenIssues_link" class="com.xpanxion.statusboard.navigation.Link">
+	<!-- Link(String locator, LocatorType byType, IPageObject page) )-->
+		<constructor-arg value="All Open Issues" />
+		<constructor-arg value="LINK_TEXT" />
+		<constructor-arg ref="allOpenIssues_page" />
+	</bean>
+
+	<bean id="allOpenUnassignedIssues_link" class="com.xpanxion.statusboard.navigation.Link">
+	<!-- Link(String locator, LocatorType byType, IPageObject page) )-->
+		<constructor-arg value="All Open Unassigned Issues" />
+		<constructor-arg value="LINK_TEXT" />
+		<constructor-arg ref="allOpenUnassignedIssues_page" />
+	</bean>
+
+	<bean id="allInProgressIssues_link" class="com.xpanxion.statusboard.navigation.Link">
+	<!-- Link(String locator, LocatorType byType, IPageObject page) )-->
+		<constructor-arg value="All In Progress Issues" />
+		<constructor-arg value="LINK_TEXT" />
+		<constructor-arg ref="allInProgressIssues_page" />
+	</bean>
+</beans>

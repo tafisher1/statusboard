@@ -1,0 +1,13 @@
+Account Manager,Current Statuses,TRUE
+Account Manager,Not Green Statuses,TRUE
+Account Manager,Red Statuses,TRUE
+Account Manager,Yellow Statuses,TRUE
+Account Manager,Green Statuses,TRUE
+Account Manager,Overdue Statuses,TRUE
+Account Manager,All Issues,TRUE
+Account Manager,All Open Issues,TRUE
+Account Manager,All Open Unassigned Issues,TRUE
+Account Manager,All In Progress Issues,FALSE
+Admin,Account & Project Management,FALSE
+Admin,User Management,FALSE
+Admin,Engagement Type Management,FALSE

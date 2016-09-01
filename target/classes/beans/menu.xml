@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+    http://www.springframework.org/schema/util 
+    http://www.springframework.org/schema/util/spring-util-4.1.xsd">
+    
+	<!-- MenuItem(String locator, LocatorType byType, IPageObject page) -->
+	<bean id="Home" class="com.xpanxion.statusboard.navigation.MenuItem">
+		<constructor-arg value="Home" />
+		<constructor-arg value="LINK_TEXT" />
+		<constructor-arg ref="HomePage" />
+	</bean>
+	<bean id="LogOut" class="com.xpanxion.statusboard.navigation.MenuItem">
+		<constructor-arg value="Log Out" />
+		<constructor-arg value="LINK_TEXT" />
+		<constructor-arg ref="LogInPage" />
+	</bean>
+	
+	<!-- build the delivery support menu item -->
+	<bean id="DeliverySupport" class="com.xpanxion.statusboard.navigation.MenuItem">
+		<constructor-arg value="Delivery Support" />
+		<constructor-arg value="PARTIAL_LINK_TEXT" />
+		<constructor-arg ref="DeliverySupportSubMenu" />
+	</bean>
+
+	<!-- sub menu under delivery support -->
+	<util:map id="DeliverySupportSubMenu" map-class="java.util.HashMap"
+		key-type="java.lang.String" value-type="com.xpanxion.statusboard.navigation.Link">
+		<entry key="Current Statuses">
+			<ref bean="currentStatuses_link" />
+		</entry>
+		<entry key="Not Green Statuses">
+			<ref bean="notGreenStatuses_link" />
+		</entry>
+		<entry key="Red Statuses">
+			<ref bean="redStatuses_link" />
+		</entry>
+		<entry key="Yellow Statuses">
+			<ref bean="yellowStatuses_link" />
+		</entry>
+		<entry key="Green Statuses">
+			<ref bean="greenStatuses_link" />
+		</entry>
+		<entry key="Overdue Statuses">
+			<ref bean="overdueStatuses_link" />
+		</entry>
+		<entry key="All Issues">
+			<ref bean="allIssues_link" />
+		</entry>
+		<entry key="All Open Issues">
+			<ref bean="allOpenIssues_link" />
+		</entry>
+		<entry key="All Open Unassigned Issues">
+			<ref bean="allOpenUnassignedIssues_link" />
+		</entry>
+		<entry key="All In Progress Issues">
+			<ref bean="allInProgressIssues_link" />
+		</entry>
+	</util:map>
+	
+	<!-- build the delivery support menu item -->
+	<bean id="Admin" class="com.xpanxion.statusboard.navigation.MenuItem">
+		<constructor-arg value="Admin" />
+		<constructor-arg value="PARTIAL_LINK_TEXT" />
+		<constructor-arg ref="AdminSubMenu" />
+	</bean>
+
+	<!-- sub menu under delivery support -->
+	<util:map id="AdminSubMenu" map-class="java.util.HashMap"
+		key-type="java.lang.String" value-type="com.xpanxion.statusboard.navigation.Link"></util:map>
+</beans>
