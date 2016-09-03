@@ -111,11 +111,11 @@ public class DriverUtil {
 	 *            identifies which By locator to use
 	 */
 	public static void click(String locator, LocatorType byType) {
-		click(getBy(locator, byType));
+		click(byType.getBy(locator));
 	}
 	
 	public static void enterText(String locator, LocatorType byType, String text) {
-		enterText(getBy(locator, byType), text);
+		enterText(byType.getBy(locator), text);
 	}
 
 	private static void enterText(By by, String text) {
@@ -123,7 +123,7 @@ public class DriverUtil {
 	}
 	
 	public static String getText(String locator, LocatorType byType) {
-		return getText(getBy(locator, byType));
+		return getText(byType.getBy(locator));
 	}
 
 	private static String getText(By by) {
@@ -142,7 +142,7 @@ public class DriverUtil {
 	 *         the locator.
 	 */
 	public static boolean isPresent(String locator, LocatorType byType) {
-		return isPresent(getBy(locator, byType));
+		return isPresent(byType.getBy(locator));
 	}
 
 	/**
@@ -155,6 +155,7 @@ public class DriverUtil {
 	 *            identifies which By locator to use
 	 * @return By to locate the web element. default: By.id
 	 */
+	 @Deprecated
 	public static By getBy(String locator, LocatorType byType) {
 		By retVal = null;
 
