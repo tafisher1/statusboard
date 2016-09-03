@@ -3,33 +3,42 @@
  */
 package com.xpanxion.statusboard;
 
+import org.openqa.selenium.By;
+import java.util.function;
+
 /**
  * Enum to control which By locator to use.
  * 
  * @author tfisher
  */
 public enum LocatorType {
-	/** By.id which locates elements by the value of the "id" attribute. */
-	ID,
-	/** By.cssSelector which locates elements by CSS. */
-	CSS_SELECTOR,
-	/**
-	 * By.className which locates elements by the value of the "class" attribute
-	 */
-	CLASS_NAME,
-	/** By.linkText which locates A elements by the exact text it displays */
-	LINK_TEXT,
-	/** By.name which locates A elements that contain the given link text */
-	NAME,
-	/**
-	 * By.partialLinkText which locates A elements that contain the given link
-	 * text
-	 */
-	PARTIAL_LINK_TEXT,
-	/** By.tagName which locates elements by their tag name */
-	TAG_NAME,
-	/** By.xpath which locates elements via XPath */
-	XPATH;
+	/** a By which locates elements by the value of the "id" attribute */
+ID(By::id),
+/** a By which locates elements by the value of the "class" attribute. */
+CLASS_NAME(By::className),
+/** a By which locates elements by CSS. */
+CSS_SELECTOR(By::cssSelector),
+/** a By which locates A elements by the exact text it displays */
+LINK_TEXT(By::linkText),
+/** a By which locates elements by the value of the "name" attribute. */
+NAME(By::name),
+/** a By which locates A elements that contain the given link text */
+PARTIAL_LINK_TEXT(By::partialLinkText),
+/** a By which locates elements by their tag name */
+TAG_NAME(By::tagName),
+/** a By which locates elements via XPath */
+XPATH(By::xpath);
+
+/** Function to transform the string locator into a Selenium By object */
+private Function<By, String> byTransform;
+
+private LocatorType(Function<By, String> by){
+	this.byTransform = by;
+}
+
+public By getBy(String locator) {
+	return byTransform.apply(locator);
+}
 
 	public static LocatorType getLocatorType(String value) {
 		switch (value.toUpperCase()) {
